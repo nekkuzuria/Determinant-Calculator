@@ -7,24 +7,24 @@ def determinan(matriks):
 
   # Kalkulasi
   for i in range(baris):
-    i, diagonalKanan, diagonalKiri = 0, 1, 1
+    indeksBaris, diagonalKanan, diagonalKiri = 0, 1, 1
     
     for j in range(kolom): 
       # Diagonal Kanan
       if indeksKolomKanan >= kolom:
-        diagonalKanan *= matriks[i][indeksKolomKanan%kolom]
+        diagonalKanan *= matriks[indeksBaris][indeksKolomKanan%kolom]
       else:
-        diagonalKanan *= matriks[i][indeksKolomKanan]
+        diagonalKanan *= matriks[indeksBaris][indeksKolomKanan]
       indeksKolomKanan += 1
 
       # Diagonal Kiri
       if indeksKolomKiri >= kolom:
-        diagonalKiri *= matriks[i][indeksKolomKiri%kolom]
+        diagonalKiri *= matriks[indeksBaris][indeksKolomKiri%kolom]
       else:
-        diagonalKiri *= matriks[i][indeksKolomKiri]  
+        diagonalKiri *= matriks[indeksBaris][indeksKolomKiri]  
       indeksKolomKiri -= 1
      
-      i += 1
+      indeksBaris += 1
       
     indeksKolomKanan = indeksKolomKanan-kolom+1
     indeksKolomKiri = indeksKolomKiri+kolom+1
