@@ -53,4 +53,4 @@ for i in range(1, baris+1):
 
 
 # Hasil Determinan Matriks
-print("\n Hasil determinan matriks :", determinan(matriks))
+print("\nHasil determinan matriks :", determinan(matriks))
