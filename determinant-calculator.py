@@ -41,9 +41,9 @@ matriks = []
 print("Silakan masukkan matriks yang ingin dihitung determinannya!")
 
 # Input Matriks
-for i in range(1, baris+1):
-    row = list(map(int, input().split()))
-    matriks.append(row)
+for i in range(baris):
+  row = list(map(int, input().split()))
+  matriks.append(row)
 
 
 # Hasil Determinan Matriks
