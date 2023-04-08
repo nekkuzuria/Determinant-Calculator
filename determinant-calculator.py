@@ -11,17 +11,11 @@ def determinan(matriks):
     
     for j in range(kolom): 
       # Diagonal Kanan
-      if indeksKolomKanan >= kolom:
-        diagonalKanan *= matriks[indeksBaris][indeksKolomKanan%kolom]
-      else:
-        diagonalKanan *= matriks[indeksBaris][indeksKolomKanan]
+      diagonalKanan *= matriks[indeksBaris][indeksKolomKanan%kolom]
       indeksKolomKanan += 1
 
       # Diagonal Kiri
-      if indeksKolomKiri >= kolom:
-        diagonalKiri *= matriks[indeksBaris][indeksKolomKiri%kolom]
-      else:
-        diagonalKiri *= matriks[indeksBaris][indeksKolomKiri]  
+      diagonalKiri *= matriks[indeksBaris][indeksKolomKiri%kolom] 
       indeksKolomKiri -= 1
      
       indeksBaris += 1
