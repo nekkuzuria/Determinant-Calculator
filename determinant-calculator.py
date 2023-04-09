@@ -6,10 +6,10 @@ def determinan(matriks):
   indeksKolomKanan, indeksKolomKiri = 0, kolom-1
 
   # Kalkulasi
-  for i in range(baris):
+  for i in range(kolom):
     indeksBaris, diagonalKanan, diagonalKiri = 0, 1, 1
     
-    for j in range(kolom): 
+    for j in range(baris): 
       # Diagonal Kanan
       diagonalKanan *= matriks[indeksBaris%baris][indeksKolomKanan%kolom]
       indeksKolomKanan += 1
