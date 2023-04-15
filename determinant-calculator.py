@@ -1,7 +1,6 @@
 def determinan(matriks):
   # Inisialisasi
-  baris = len(matriks)
-  kolom = len(matriks[0])
+  baris, kolom = 3,3 
   sumDiagonalKanan, sumDiagonalKiri = 0, 0 
   indeksKolomKanan, indeksKolomKiri = 0, kolom-1
 
@@ -31,17 +30,13 @@ def determinan(matriks):
     
 print("=============PROGRAM DETERMINAN MATRIKS=============")
 
-# Input Baris dan Kolom
-baris = int(input("Masukkan jumlah baris : "))
-kolom = int(input("Masukkan jumlah kolom : "))
-
 # Deklarasi Array Matriks
 matriks = []
 
 print("Silakan masukkan matriks yang ingin dihitung determinannya!")
 
 # Input Matriks
-for i in range(baris):
+for i in range(3):
   row = list(map(int, input().split()))
   matriks.append(row)
 
